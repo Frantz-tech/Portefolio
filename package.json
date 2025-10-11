@@ -13,7 +13,9 @@
     "lint:fix": "eslint '**/*.{js,cjs,mjs,jsx}' --fix",
     "lint:all": "eslint '**/*.{js,cjs,mjs,jsx}' --fix && prettier --write .",
     "precommit": "lint-staged",
-    "start": "cd client && npm run start"
+    "start": "cd client && npm run start",
+    "nodemon": "nodemon server/server.js",
+    "dev": "concurrently \"npm run start\" \"npm run nodemon\""
   },
   "keywords": [],
   "author": "",
