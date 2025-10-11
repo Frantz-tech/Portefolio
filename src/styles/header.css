@@ -1,0 +1,278 @@
+header {
+  position: relative;
+  height: 100%;
+}
+
+:root {
+  --bodyBgColor: #1a191d;
+  --bgCalq: linear-gradient(180deg, #00000012 60%, #1a191d 100%);
+  --links: #f1f1f1;
+  --textcolor: rgb(0, 0, 0);
+  --purple: #9381ff;
+}
+body {
+  position: relative;
+  background-color: var(--bodyBgColor);
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(../assets/homeCover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+}
+.bgcalq {
+  height: 100%;
+  width: 100%;
+  background: var(--bgCalq);
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navSticky {
+  display: none;
+  height: 7vh;
+  position: fixed;
+  top: 0;
+  background-color: #1a1b1db7;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease;
+  transform: translateY(-100%);
+  opacity: 0;
+  z-index: 100;
+}
+.navSticky.active a {
+  color: #67daed;
+}
+.navSticky.active .linka a:hover {
+  color: var(--links);
+  background: #67daed;
+}
+
+.navSticky.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transform: translateY(0);
+  opacity: 1;
+}
+.navSticky.active img {
+  display: none;
+}
+
+.linka {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  gap: 30px;
+  font-size: 18px;
+}
+
+.linka a {
+  border-radius: 50px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: var(--links);
+  font-size: 1rem;
+}
+
+.linka a:hover {
+  background: var(--links);
+  color: var(--textcolor);
+}
+
+.circle {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-color: var(--links);
+  opacity: 1;
+}
+.circle.yel {
+  border-radius: 50px;
+  box-shadow:
+    inset 0 0 30px 0 #fff,
+    inset 20px 0 30px #ffd400,
+    inset -20px 0 30px rgb(255, 0, 0),
+    inset 20px 0 300px #ff40d6,
+    inset -20px 0 300px #e3ff4b,
+    0 0 50px #fff,
+    -10px 0 100px #fbff00,
+    10px 0 80px #f55;
+}
+
+h1,
+h2,
+h3,
+h5 {
+  color: var(--links);
+}
+
+h1 {
+  letter-spacing: 3px;
+  font-size: clamp(5vw, 10em, 10vw);
+  text-shadow: 1px 3px 11px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h2,
+h4,
+h3 {
+  font-size: 4em;
+}
+h2 {
+  letter-spacing: -0.2rem;
+}
+
+h5 {
+  font-size: clamp(14px, 1.5vw, 22px);
+  letter-spacing: 2.2px;
+  font-weight: normal;
+  text-align: center;
+}
+.grp1 {
+  border-radius: 50px;
+  max-width: 120px;
+  margin-left: 20px;
+}
+
+.abb1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 55vh;
+  padding: 50px;
+}
+.abb1 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.elementor {
+  box-sizing: border-box;
+}
+.elementor-widget-container {
+  position: absolute;
+  top: 20vh;
+  left: 54%;
+  width: 50px;
+  height: 50px;
+  animation: 2s linear infinite alternate widgetslide;
+}
+@keyframes widgetslide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+@media (max-width: 1366px) {
+  main {
+    padding: 100px 50px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .linka {
+    gap: 20px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 3.5em;
+  }
+
+  .elementor-widget-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  button {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 1024px) {
+  main {
+    padding: 100px 50px;
+  }
+  .abb1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 55vh;
+  }
+  .abb1 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    font-size: 20px;
+  }
+
+  .linka {
+    gap: 5px;
+  }
+  .linka a {
+    font-size: 12px;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 3em;
+  }
+
+  .elementor-widget-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 460px) {
+  h2,
+  h3,
+  h4 {
+    font-size: 2em;
+  }
+}

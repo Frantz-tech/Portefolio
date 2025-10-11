@@ -1,0 +1,163 @@
+/* Nouveau test pour le commit */
+
+:root {
+  --bgcolor: #1f191d;
+  --links: #f1f1f1;
+  --textcolor: black;
+  --aboutMeText: #f1f1f1b0;
+  --aboutMebg: rgba(128, 128, 128, 0.137);
+  --purple: #9381ff;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+section {
+  position: relative;
+}
+.about-me {
+  min-height: 100vh;
+}
+.bitmoji {
+  display: flex;
+  width: 18vh;
+}
+.bitmoji-img {
+  margin-left: 50px;
+}
+.about-me-parag {
+  background-color: var(--aboutMebg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  color: var(--aboutMeText);
+  width: 50vw;
+}
+
+.container-about-me {
+  display: flex;
+  gap: 2vw;
+  position: relative;
+}
+.bg-html {
+  position: absolute;
+  width: 40%;
+  top: 95%;
+  left: 30%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.map {
+  width: 50vw;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.about-me-city {
+  width: 50vw;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.map {
+  display: flex;
+  align-self: center;
+  width: 50vw;
+  height: 100%;
+  transition: 1s ease-out;
+  transform: scale(1);
+}
+
+.map:hover {
+  cursor: pointer;
+  transition: 1s ease;
+  transform: scale(1.1);
+}
+
+.bvn {
+  color: var(--purple);
+}
+
+.herop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  border: 2px solid var(--aboutMeText);
+  height: 40px;
+  border-radius: 5px;
+  animation: changeBorderColor 1s infinite;
+}
+@keyframes changeBorderColor {
+  0% {
+    border-top-color: #9381ff;
+  }
+
+  16% {
+    border-right-color: #9381ff;
+  }
+
+  32% {
+    border-bottom-color: #9381ff;
+  }
+  50% {
+    border-left-color: #9381ff;
+  }
+
+  51% {
+    border-top-color: var(--aboutMeText);
+  }
+  67% {
+    border-right-color: var(--aboutMeText);
+  }
+  84% {
+    border-bottom-color: var(--aboutMeText);
+  }
+
+  100% {
+    border-left-color: var(--aboutMeText);
+  }
+}
+
+.herop span {
+  color: white;
+}
+
+@media screen and (width < 1024px) {
+  .container-about-me {
+    flex-wrap: wrap;
+  }
+  .about-me-city,
+  .about-me-parag,
+  .map {
+    width: 100%;
+  }
+}
+@media screen and (width < 768px) {
+  .bitmoji {
+    width: 12vh;
+  }
+  .about-me {
+    min-height: 0;
+  }
+  .bitmoji-img {
+    margin-left: 20px;
+  }
+  .bvn {
+    font-size: small;
+  }
+  .herop {
+    max-width: 200px;
+  }
+  .about-me-parag,
+  p {
+    font-size: 12px;
+  }
+}

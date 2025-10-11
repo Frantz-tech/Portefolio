@@ -1,0 +1,64 @@
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.formContact {
+  width: 600px;
+  gap: 1vh;
+  border: 4px solid #923fe6;
+  border-radius: 5px;
+  padding: 40px;
+  padding-bottom: 1vh;
+}
+
+.container-contact-me {
+  display: flex;
+  justify-content: center;
+}
+.sendbtn {
+  cursor: pointer;
+  width: clamp(120px, 15vw, 200px);
+  border: none;
+  border-radius: 20px;
+  align-self: center;
+  margin: 20px;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+}
+@media screen and (width <768px) {
+  .formContact {
+    width: 90%;
+  }
+
+  .left-side-container,
+  .right-side-container {
+    width: 100%;
+  }
+
+  .left-side-container {
+    padding: 30px 30px 0 50px;
+  }
+  .right-side-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  footer {
+    flex-direction: column;
+    align-content: center;
+  }
+  .footerLinks {
+    align-items: center;
+  }
+  .elementor-left-footer,
+  .elementor-right-footer {
+    width: 100%;
+  }
+  .elementor-right-footer {
+    flex-direction: column;
+  }
+}

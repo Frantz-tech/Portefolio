@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.expertise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-expertise {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-top: 80px;
+}
+
+.section-header {
+  display: flex;
+}
+.section-header img {
+  width: 37px;
+  height: 37px;
+}
+
+.section-header h5 {
+  padding-left: 3vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.2em;
+  font-size: 26px;
+  clear: both;
+  text-align: inherit;
+  letter-spacing: -0.1rem;
+}
+.text-section-block {
+  color: #fff;
+  font-family: 'Roboto Mono', Sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  padding-left: 35px;
+}
+.text-section-block::before {
+  content: '<h3>';
+  opacity: 0.3;
+  color: white;
+  display: block;
+  margin-left: -35px;
+  font-weight: normal;
+  font-size: 14px;
+}
+.text-section-block::after {
+  content: '<h3>';
+  opacity: 0.3;
+  color: white;
+  display: block;
+  margin-left: -35px;
+  font-weight: normal;
+  font-size: 14px;
+}
+.composant-section-block {
+  width: 33.3%;
+  border: 3px solid #a3a3a3;
+  margin-right: -1.5px;
+  margin-bottom: -1.5px;
+  padding: 40px 30px;
+}
+.section-text {
+  position: relative;
+}
+.section-text::after {
+  opacity: 0.3;
+  content: '';
+  width: 0;
+  height: 65%;
+  position: absolute;
+  background-color: white;
+  border: 0.1px solid white;
+  bottom: 17%;
+  left: 17px;
+}
+
+.title-line-one {
+  display: inline-block;
+  position: relative;
+}
+
+.composant-section-block:nth-child(1) .title-line-one::after,
+.composant-section-block:nth-child(2) .title-line-one::after,
+.composant-section-block:nth-child(3) .title-line-one::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  z-index: -1;
+}
+.composant-section-block:nth-child(1) .title-line-one::after {
+  background-color: #2c4ad8;
+}
+.composant-section-block:nth-child(2) .title-line-one::after {
+  background-color: #de068d;
+}
+.composant-section-block:nth-child(3) .title-line-one::after {
+  background-color: #ff6b2b;
+}
+
+.title-header-expertise {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+@media screen and (width < 1024px) {
+  .composant-section-block {
+    width: 50%;
+  }
+}
+
+@media screen and (width < 768px) {
+  .composant-section-block {
+    width: 100%;
+  }
+  .container-expertise {
+    margin-top: 100px;
+  }
+  .section-header h5 {
+    font-size: 6.6vw;
+  }
+  .container-expertise {
+    gap: 2vh;
+  }
+
+  .composant-section-block:nth-child(1) .title-line-one::after,
+  .composant-section-block:nth-child(2) .title-line-one::after,
+  .composant-section-block:nth-child(3) .title-line-one::after {
+    top: clamp(20px, 5.5vw, 40px); /* min 20px, max 40px, se scale avec 5.5vw */
+    left: 0;
+  }
+}

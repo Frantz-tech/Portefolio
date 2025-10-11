@@ -1,0 +1,77 @@
+/* Nouveau test pour le commit */
+
+.containerCaroussel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  opacity: 0.3;
+}
+.containerCaroussel:hover {
+  opacity: 1;
+}
+
+.carousselTitle p {
+  color: white;
+}
+
+.swiper {
+  width: 480px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.caroussel-elementor {
+  width: 100%;
+  max-width: 70px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper {
+  align-items: center;
+  margin-bottom: 35px;
+  justify-content: space-around;
+}
+
+.swiper {
+  cursor: pointer;
+  margin-bottom: 3vh;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.container-loop-animation {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+.container-loop-animation dotlottie-player {
+  cursor: pointer;
+}
+
+@media screen and (width < 768px) {
+  .caroussel-elementor {
+    max-width: 35px;
+    max-height: 35px;
+  }
+  .swiper {
+    width: 300px;
+  }
+}
