@@ -18,5 +18,3 @@ function App() {
   );
 }
 export default App;
-
-/* Nouveau test pour le commit */
