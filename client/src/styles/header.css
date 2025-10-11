@@ -215,10 +215,10 @@ h5 {
     height: 40px;
   }
 
-  button {
+  /* button {
     width: 45px;
     height: 45px;
-  }
+  } */
 }
 @media (max-width: 1024px) {
   main {
