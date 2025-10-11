@@ -8,6 +8,7 @@ function ContactMe() {
   const [formData, setFormData] = useState({
     name: '',
     lastname: '',
+    email: '',
     message: '',
   });
   const handleChange = e => {
@@ -28,7 +29,7 @@ function ContactMe() {
       .then(
         () => {
           alert('Message envoyé avec succès ✅');
-          setFormData({ name: '', lastname: '', message: '' });
+          setFormData({ name: '', lastname: '', email: '', message: '' });
         },
         error => {
           console.error('Erreur', error);
@@ -51,6 +52,16 @@ function ContactMe() {
               id="lastname"
               required
               value={formData.lastname}
+              onChange={handleChange}
+            />
+            <label htmlFor="email"> Email </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="email@example.com"
+              value={formData.email}
               onChange={handleChange}
             />
             <label htmlFor="message"> Message : </label>
