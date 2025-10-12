@@ -24,6 +24,11 @@ function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const toggleMenu = () => setOpenMenu(!openMenu);
 
+  if (openMenu) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
