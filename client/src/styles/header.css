@@ -54,6 +54,7 @@ body {
   transform: translateY(-100%);
   opacity: 0;
   z-index: 100;
+  transition: 0.5s ease-in-out;
 }
 .navSticky.active a {
   color: #67daed;
@@ -72,6 +73,15 @@ body {
   opacity: 1;
 }
 .navSticky.active img {
+  display: none;
+}
+.closeBtnBurger,
+.containerBurger {
+  position: absolute;
+  left: -100vw;
+  display: none;
+}
+.burgerMenu {
   display: none;
 }
 
@@ -178,6 +188,56 @@ h5 {
   height: 50px;
   animation: 2s linear infinite alternate widgetslide;
 }
+
+.closeBtnBurger {
+  background-color: rgba(136, 136, 136, 0.03);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  font-size: 24px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 0.94rem;
+  margin-top: 20px;
+}
+.burgerLink,
+.copyright {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+.hiddenMenuList {
+  display: block;
+  line-height: 2em;
+  padding: 5px 15px;
+  position: relative;
+}
+.burgerLink {
+  text-decoration: none;
+  color: black;
+}
+
 @keyframes widgetslide {
   from {
     transform: translateX(0);
@@ -270,6 +330,56 @@ h5 {
     width: 45px;
     height: 45px;
   } */
+}
+
+@media (max-width: 768px) {
+  .linka {
+    display: none;
+  }
+  .nav {
+    position: relative;
+    justify-content: flex-start;
+  }
+  .navSticky {
+    top: -8vh;
+  }
+  .grp1 {
+    margin-left: 50px;
+  }
+  .burgerMenu {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    position: absolute;
+    margin: 10px 0 0 15px;
+    transition: 0.3s ease-in-out;
+  }
+  .burgerMenu:hover {
+    color: #67daed;
+  }
+  .containerBurger {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    background-color: #fff;
+    width: 100vw;
+    text-align: left;
+    overflow-y: auto;
+    padding: 100px 20px;
+    transition: 0.3s ease-in-out;
+  }
+  .closeBtnBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerBurger.active {
+    left: 0;
+  }
 }
 
 @media (max-width: 460px) {

@@ -1,24 +1,29 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import logo from '../assets/ti.png';
 import '../styles/header.css';
 import '../styles/index.css';
+import { MenuBurger } from './burgerMenu';
 import { contactRef } from './main/contact';
 import { expertiseRef } from './main/expertise';
 import { projectRef } from './main/projects';
-const scrollToExpertiseRef = () => {
+export const scrollToExpertiseRef = () => {
   expertiseRef.current?.scrollIntoView({ behavior: 'smooth' });
 };
-const scrollToContactRef = () => {
+export const scrollToContactRef = () => {
   contactRef.current?.scrollIntoView({ behavior: 'smooth' });
 };
-const scrollToWorkRef = () => {
+export const scrollToWorkRef = () => {
   projectRef.current?.scrollIntoView({ behavior: 'smooth' });
 };
-const scrollToTop = () => {
+export const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
+  const toggleMenu = () => setOpenMenu(!openMenu);
+
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +44,10 @@ function Header() {
 
       {/* Nav de base */}
       <nav className="nav">
+        <div className={`burgerMenu ${openMenu ? '' : 'hidden'}`} onClick={toggleMenu}>
+          <span>☰</span>{' '}
+        </div>
+
         <a href="#logo">
           <img className="grp1" src={logo} alt="logopng" />
         </a>
@@ -65,6 +74,8 @@ function Header() {
           </li>
         </ul>
       </nav>
+
+      <MenuBurger openMenu={openMenu} toggleMenu={toggleMenu} />
 
       {/* Placeholder pour la nav sticky */}
       {/* {sticky && <div style={{ height: '80px' }}></div>} */}

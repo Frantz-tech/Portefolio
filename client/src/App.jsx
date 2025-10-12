@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 import Footer from './components/footer';
 import Header from './components/header';
 import HeroSection from './components/heroSection';

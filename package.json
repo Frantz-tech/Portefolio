@@ -24,8 +24,10 @@
   "dependencies": {
     "@babel/preset-react": "^7.26.3",
     "@emailjs/browser": "^4.4.1",
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@prisma/client": "^6.6.0",
     "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.8",
     "commit": "^0.0.4",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
