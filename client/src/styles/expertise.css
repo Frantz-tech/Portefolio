@@ -14,22 +14,14 @@
 
 .section-header {
   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .section-header img {
   width: 37px;
   height: 37px;
 }
 
-.section-header h5 {
-  padding-left: 3vw;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  line-height: 1.2em;
-  font-size: 26px;
-  clear: both;
-  text-align: inherit;
-  letter-spacing: -0.1rem;
-}
 .text-section-block {
   color: #fff;
   font-family: 'Roboto Mono', Sans-serif;
@@ -105,7 +97,14 @@
 
 .title-header-expertise {
   position: relative;
-  margin-bottom: 20px;
+  padding-left: 2vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.2em;
+  font-size: 26px;
+  clear: both;
+  text-align: inherit;
+  letter-spacing: -0.1rem;
 }
 
 @media screen and (width < 1024px) {

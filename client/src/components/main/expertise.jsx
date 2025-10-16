@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
-import logoTwitter from '../../assets/twitter.png';
+import bdd from '../../assets/bdd.png';
+import ecran from '../../assets/ordinateur.png';
+import reactLogo from '../../assets/svg/icons8-react.svg';
 import '../../styles/expertise.css';
 import AnimationLogo from '../animationLogo';
 import BlockExpertise from './expertiseBlock';
@@ -24,8 +26,10 @@ function Expertise() {
                 <span className="title-line">Developpement</span>
               </>
             }
-            logo={logoTwitter}
-            parag={'Experienced in both functional and OOP: Dart, Python, Java, JavaScript, TypeScript.'}
+            logo={ecran}
+            parag={
+              'Familiar with Python and experienced in object-oriented programming with JavaScript and TypeScript.'
+            }
           />
           <BlockExpertise
             title={
@@ -35,23 +39,21 @@ function Expertise() {
                 <span className="title-line">React, NextJs</span>
               </>
             }
-            logo={logoTwitter}
+            logo={reactLogo}
             parag={
-              'Passionate about UI/UX. Over 5 years of development experience in HTML, CSS, JS, React and NextJS frameworks.'
+              'Passionate about UI/UX. Over 2 years of development experience in HTML, CSS, JS, React and NextJS frameworks.'
             }
           />
           <BlockExpertise
             title={
               <>
-                <span className="title-line-one">Flutter Dev</span>
+                <span className="title-line-one">Server & </span>
                 <br />
-                <span className="title-line">Android, iOS</span>
+                <span className="title-line">Database</span>
               </>
             }
-            logo={logoTwitter}
-            parag={
-              'Very skilled in developing hybrid mobile apps and cross-platform solutions using the Flutter framework.'
-            }
+            logo={bdd}
+            parag={'Experienced in Node.js and MySQL development, creating stable APIs and managing data effectively.'}
           />
         </div>
       </section>
