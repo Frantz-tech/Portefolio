@@ -187,3 +187,11 @@ footer {
   background-color: #923fe6;
   height: 45%;
 }
+
+@media screen and (width < 768px) {
+  .footer-heading-title,
+  .footer-text,
+  .footerLinks {
+    margin-left: 0;
+  }
+}
